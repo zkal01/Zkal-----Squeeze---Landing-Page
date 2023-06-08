@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.clear{
+    clear: both;
+}
+
+header{
+   width: 100%;
+   height: 550px;
+   position: relative;
+}
+
+#bg1{
+   /* background-color: rgb(200, 199, 199);*/
+    /*position: fixed;*/
+    width: 100%;
+    height: 550px;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+.bg-opacity{
+    z-index: 1;
+    background-color: rgb(200, 199, 199);
+    width: 100%;
+    height: 550px;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header > h1.MainT{
+    z-index: 2;
+    display: inline-block;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+}
+
+header > h1.MainT{
+    font-weight: bolder;
+    text-transform: uppercase;
+    max-width: 600px;
+    font-size: 50px;
+}
+
+header > p.MainP{
+    font-weight: 600;
+    font-size: 25px;
+    z-index: 2;
+    display: inline-block;
+    position: absolute;
+    top: 270px;
+    left: 150px;
+}
+
+
+section.about{
+    width: 100%;
+    padding: 30px 2%;
+    background-color: rgb(118,108,118);
+}
+
+.FLeft{
+    width: 50%;
+    float: left;
+    margin-left: 50px;
+    text-align: center;
+}
+
+.about h2.aboutT{
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.about p.aboutP{
+    font-size: 24px;
+    max-width: 560px;
+    font-weight: 600; 
+    letter-spacing: 0.5px;
+}
+
+p.aboutP > span.BoldSpan{
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: bold; 
+    letter-spacing: 0.5px;
+    color: orange;
+}
+
+#buyButton{
+    border: 1px solid #f00;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 180px;
+    height: 40px;
+    color: black;
+    background-color: red;
+    font-size: 30px;
+    text-decoration: none;
+    margin-top: 40px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+}
+
+#buyButton:hover{
+    background-color: rgba(255,106,106,0.6);
+    transition: 0.5s;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+.FRight{
+    width: 50%;
+    float: right;
+}
+
+img.img2{
+    margin-top: -200px;
+    display: inline-block;
+    margin-left: 100px;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.modal-overlay{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: rgba(0,0,0,0.7);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal{
+    text-align: left;
+    padding: 15px 2%;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 5px 5px 15px 0px rgba(255,255,255,0.3);
+}
+
+.modalT{
+    font-weight: bolder;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.modalP{
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+label{
+    margin-top: 30px;
+    width: 100%;
+    display: inline-block;
+    font-size: 20px;
+}
+
+input{
+    display: inline-block;
+    padding: 10px;
+    width: 400px;
+    outline: 0;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.form-button{
+    width: 250px;
+    text-transform: uppercase;
+    color: black;
+    padding: 10px;
+    background-color: rgb(118,108,118);
+    text-align: center;
+    align-items: center;
+    height: 50px;
+    border: 0;
+    margin-top: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 5px 5px 8px 0px rgba(0,0,0,0.75);
+}
+
+.form-button:hover{
+    background-color: rgba(176, 170, 176, 0.6);
+    box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+    transition: 0.4s;
+}
+
+.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+section.benefits{
+    width: 100%;
+    padding: 10px 2%;
+    text-align: center;
+    background-color: rgb(122 122 122);
+}
+
+.benefits > h1.benefitsT{
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    padding: 10px;
+}
+
+.benefits > p{
+    text-align: left;
+    font-size: 23px;
+    font-weight: 500;
+    color: black;
+    padding: 10px;
+}
+
+.benefits ul{
+    color: black;
+    font-weight: 600;
+    padding: 25px;
+    font-size: 22px;
+    text-align: left;
+    display: inline-block;
+}
+
+.benefits li{
+    padding-top: 15px;
+}
+
+section.variations{
+    width: 100%;
+    text-align: center;
+    padding: 15px 2%;
+    background-color: #b3b3b3;
+}
+
+.variations > h1{
+    font-size: 45px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.variations > p{
+    margin-top: 20px;
+    font-size: 23px;
+    color: black;
+    text-align: left;
+}
+
+.variations > ul{
+    text-align: left;
+    padding: 20px 2%;
+}
+
+.variations > ul li h2{
+    color: black;
+    font-size: 23px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.variations > ul li img{
+    padding-bottom: 20px;
+    width: 800px;
+    height: auto;
+}
+
+footer{
+    text-align: center;
+    width: 100%;
+    padding: 20px 2%;
+    background-color: rgb(118,108,118);
+}
+
+footer > p{
+    font-size: 18px
+}
+
+footer > p > a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #4d2ec7;
+}
+
+footer > a.backTop{
+    display: inline-block;
+    margin-top: 17px;
+    color: black;
+
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+</head>
+
+<body>
+    <header id="header">
+        <h1 class="MainT">Conheça a nova garrafa squeeze!</h1>
+        <p class="MainP">A melhor para a sua vida!</p>
+        <img id="bg1" src="sources/bg1.jpg" alt="bg1">
+    </header>
+
+    <div class="bg-opacity"></div>
+
+    <section class="about">
+        <div class="FLeft">
+            <h2 class="aboutT">Compre agora mesmo!</h2>
+            <p class="aboutP">Adquira agora a nova Garrafa Squeeze com um <span class="BoldSpan">preço
+                    imperdivel!</span></p>
+            <a onclick="Modal.open()" id="buyButton" href="#">Comprar</a>
+            <!--<button id="buyButton">Comprar</button>-->
+        </div>
+        <div class="clear"></div>
+
+        <div class="FRight">
+            <img class="img2" src="sources/img2.jpg" alt="">
+        </div>
+        <div class="clear"></div>
+    </section>
+
+    <div class="clear"></div>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <h1 class="modalT">Preencha o formulario</h1>
+            <p class="modalP">Nossa equipe entrará em contato com você com os dados obtidos abaixo, assim que possivel,
+                para enviar nosso catálogo promocional!</p>
+
+            <form>
+                <label for="name">Nome</label>
+                <input name="name" id="name" type="text" placeholder="Insira seu nome aqui...">
+
+                <label for="tel">Telefone</label>
+                <input type="tel" name="telephone" id="tel" placeholder="Insira seu número de telofone aqui...">
+
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Insira seu endereço de e-mail aqui...">
+
+                <input onclick="Modal.close()" class="form-button" type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+
+    <section class="benefits">
+        <h1 class="benefitsT">Befícios de ter uma Garrafa Squeeze</h1>
+
+        <p>Um dos principais benefícios das squeezes personalizadas é a redução do consumo de embalagens descartáveis,
+            como garrafas plásticas. Ao optar por uma squeeze reutilizável, evita-se o descarte excessivo de plástico,
+            contribuindo para a diminuição da poluição e preservação do meio ambiente. Além disso, a reutilização da
+            squeeze também representa uma economia financeira, já que não é necessário comprar constantemente garrafas
+            de água ou outras bebidas.</p>
+
+        <p>Outro ponto positivo é a praticidade oferecida pelas squeezes personalizadas. Elas são leves, fáceis de
+            transportar e ocupam pouco espaço em bolsas, mochilas e até mesmo em suportes de bicicletas. Assim, é
+            possível levar sua bebida preferida para qualquer lugar, seja no trabalho, academia, viagens ou até mesmo
+            durante atividades ao ar livre. Além disso, muitas squeezes personalizadas possuem tecnologias que mantêm a
+            temperatura das bebidas, permitindo que sejam mantidas geladas ou quentes por mais tempo.</p>
+
+
+            <ul>
+                <li>Durabilidade: Sua durabilidade é maior se comparada a outros modelos. Por isso, você não precisa se preocupar em comprar novas garrafas a cada dois ou três meses.</li>
+
+                <li>Ecologicamente correta: Evita o desperdício de água em garrafas de plástico descartáveis ou copos plásticos.</li>
+
+                <li>Fácil de transportar: Graças ao formato ergonômico, acoplado às alças, é mais fácil levar a sua garrafa squeeze para qualquer lugar.
+                </li>
+            </ul>
+
+    </section><!--benefits-->
+
+    <section class="variations">
+        <h1>Conheça as variações da Squeeze</h1>
+
+        <p>Temos vários modelos de garrafas Squeeze, conheça-as a baixo e escolha a que melhor se encaixa em sua rotina!</p>
+     
+        <ul>
+                <li><h2>1- Para seu treino</h2>
+                <img src="https://www.printi.com.br/blog/wp-content/uploads/2023/05/Squeeze-personalizados-Blog-1.png" alt="">
+                </li>
+
+                <li><h2>2- Para o dia a dia em sua empresa</h2>
+                <img src="https://www.printi.com.br/blog/wp-content/uploads/2023/05/Squeeze-personalizados-Blog-3.png" alt=""></li>
+
+                <li><h2>3- Para momentos especiais</h2>
+                <img src="https://www.printi.com.br/blog/wp-content/uploads/2023/05/Squeeze-personalizados-Blog-2.png" alt="">
+                </li>
+
+                <li><h2>4- Para eventos especiais</h2>
+                    <img src="https://www.printi.com.br/blog/wp-content/uploads/2023/05/Squeeze-personalizados-Blog-4.png" alt="">
+                </li>
+        </ul>
+    </section>
+
+    <footer>
+        
+        <p>Desenvolvido com &#x1F496; por <a href="https://github.com/zkal01" target="_blank">Zkal.Dev</a></p>
+
+        <a class="backTop" href="#header">Voltar ao topo</a>
+    </footer>
+
+    <script>
+
+        // Dos dois jeitos a seguir, é possível realizar a mesma ação
+
+        // 1ª forma 
+        /*var modal = document.querySelector("#buyButton");
+
+        modal.addEventListener('click', function(){
+                document.querySelector(".modal-overlay").classList.add('active')
+        });*/
+
+        // 2ª forma
+
+        const Modal = {
+
+            open() {
+                document.querySelector(".modal-overlay").classList.add('active')
+            }, close() {
+                document.querySelector(".modal-overlay").classList.remove('active')
+            }
+
+        };
+
+
+
+    </script>
+</body>
+
+</html>
